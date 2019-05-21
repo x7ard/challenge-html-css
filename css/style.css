@@ -1,0 +1,270 @@
+/*
+
+Vert: #7ed56f
+Vert medium: #55c57a
+Dark vert: #28b485
+
+*/
+
+/* Copyright @TIJANI ABDELLATIF 
+Front web developer 
+
+*/ 
+
+/* normaliser le css */
+
+*
+{
+    
+}
+
+body {
+    padding: 15px;
+}
+
+/* le corps de la page */
+
+.header 
+{
+    background-image: linear-gradient(to right,rgba(85,197,122,0.5),rgba(126,213,111,1)), url('../img/hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 570px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+    opacity: 0.5;
+    color: #fff;
+}
+
+.logo
+{
+    animation-name: moveInLeft;
+    position: relative;
+}
+
+.logowhite
+{
+    width: 75px;
+    height: auto;
+    margin: 45px;
+    /*****  animation  *****/
+    animation-name: moveInBottom;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    position: relative;
+}
+
+.main
+{
+    width: 50%;
+    margin: auto;
+}
+.heading1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+}
+.heading11
+{
+    width: 100%;
+    display: block;
+    font-family: robotic;
+    font-size: 1.3em;
+    letter-spacing: 40px;
+    text-align: center;
+    /******   animation   *****/
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    position: relative;
+}
+
+.heading12
+{
+    font-size: 0.67em;
+    letter-spacing: 9px;
+    text-align: center;
+    width: 100%;
+    /******   animation   *****/
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    position: relative;
+}
+
+/* Animation */ 
+
+@keyframes moveInLeft
+{
+    0%
+    {
+       
+       opacity: 0;
+       right: -20px;
+       top: -10px;
+    }
+
+   /* 60%
+    {
+       transform: rotate(30deg) ;
+    }
+    */
+
+    80%
+    {
+        opacity: 1;
+        right: 0px;
+        top: -10px;
+    }
+
+    100%
+    {
+        top: 0px;
+    }
+}
+
+@keyframes moveInRight
+{
+    0%
+    {
+     left: -20px; 
+     opacity: 0;  
+    }
+
+   /* 60%
+    {
+       transform: rotate(-30deg) ;
+    }
+    */
+
+    80%
+    {
+       opacity: 1;
+       left: 12px;
+    }
+
+    100%
+    {
+        left: 0px;
+        opacity: 1;
+
+    }
+}
+
+
+
+@keyframes moveInBottom
+{
+    0%
+    {
+        position: relative;
+        top: -100px;
+        opacity: 0;
+        left: 10px;
+    }
+
+    80%
+    {
+        opacity: 1;
+        left: 10px;
+        top: 0px;
+    }
+
+    100%
+    {
+        position: relative;
+        left: 0px;
+    }
+}
+
+/* bouton */ 
+.btn:link,.btn:visited
+{
+   display: block;
+   background-color: white;
+   color: black;
+   width: 200px;
+   text-decoration: none;
+   padding: 20px;
+   text-align: center;
+   margin: auto;
+   border-radius: 25px;
+   text-transform: uppercase;
+   margin-top: 100px;
+   animation-name: moveInRight;
+   position: relative;
+   animation-duration: 2s;
+   animation-timing-function: ease-out;
+   
+}
+
+.btn:hover{
+    transform: translate(0px,-3px);
+    box-shadow: 0px 5px 25px;
+}
+.btn:active
+{
+  
+   
+}
+
+.btn-white
+{
+   
+
+}
+
+/* animer le boutton behind the scene  */ 
+
+.btn::after /* l'element fils apres le bouton */
+{
+  
+
+}
+
+.btn-white::after /* l'element fils apres le bouton */{
+
+   background-color: transparent;
+   content: '';
+   border: 0px solid black;
+   padding: 15px;
+   position: absolute;
+   top: 35px;
+   left: 49%;
+   margin-top: -29px;
+   border-radius: 55px;
+   width: 200px;
+   margin-left: -110px;
+   height: 15px;
+   z-index: -1;
+   visibility: visible;
+   opacity: 1;
+   transition: border 0.5s, top 0.5s, left 0.5s, opacity 0.5s;
+   /*transition: width 0.5s, height 0.5s, opacity 0.5s, visibility 0.5s, top 0s, left 0s;*/
+}
+
+.btn:hover::after
+{
+  z-index: -1;
+  top: 5px;
+  left: 85px;
+  opacity: 0;
+  border: 30px solid #fff;
+  /*top: 0px;
+  left: 0px;
+  visibility: visible;
+  height: 112px;
+  width: 390px;
+  opacity: 0.5;*/
+}
+.btn-animated 
+{
+  
+   
+}
+
+
+
+
+ 
+ 
